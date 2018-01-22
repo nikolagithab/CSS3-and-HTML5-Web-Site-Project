@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<!--
+		Name: Nikola Petrovski
+		Version: 2
+		Date created: 27 III 2017
+		Date updated: 9 IV 2017 
+		Description: A website with a variety of games appropriately organized using well-formed and valid HTML5 and aesthetically styled by using CSS3.
+	-->
+	<head>
+		<!-- This is the page title.-->
+		<title>Cryptogram Page</title>
+		<!-- This is the character set used in this page.-->
+		<meta charset="utf-8" />
+		<!-- This is  information that appears in web search results for this page.-->
+		<meta name="author" content="Nikola Petrovski" >
+		<meta name="description" content="The purpose of this page is to learn and apply the good style practices of CSS3 in order to develop and publish a secondary web page (Cryptogram) appropriately organized using well-formed and valid HTML5 .">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--This element gives the browser instructions how to control the page dimensions ans scaling.-->
+		<link rel="stylesheet" type="text/css"  href="../css/main.css">
+		
+		<style>
+			.game {
+				background-color: white;
+				height: 300px;
+			}
+			
+			.board li {
+				float: left;
+				list-style: none;
+				cursor: pointer;
+				padding-top: 50px;
+				height: 50px;
+				width: 50px;
+			}
+			
+			.board input {
+				width: 90%;
+				height: 50px;
+				font-size: 1.2em;
+				border: 1px dotted orange;
+				color: blue;
+				text-align: center;
+			}
+			
+			.board label {
+				font-size: 2em;
+				color: black;
+			}
+			
+			.alpha li {
+				list-style: none;
+				color: orange;
+				float: left;
+				margin: 50px 10px 10px 0px;
+				font-size: 1.3em;
+			}
+			
+			.alpha {
+				display: table;
+				margin: 0 auto;
+			}
+			
+			.board input:hover, .alpha li:hover {
+				background-color: orange;
+			}
+			
+			.alpha li:hover {
+				color: white;
+			}
+			
+			.game:after, .board:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+			
+		</style>
+		
+	</head> 
+	<body>
+		<header>
+			<!-- All pages share the same page header. Common CSS rules are placed in css/main.css file.The header contains the largest and the second largest headings has an orange background color with no margin and stretches across the entire page; background is half-transparent (0.5); the height is determined automatically by the content; h1 has a font size of 3.9 em and h2 of 2.5 em; there is a 20 pixel padding on top and left..-->
+			<h1>Games and Other Web Apps</h1>
+			<h2>SYST10049 Web Development</h2>
+		</header>
+
+		<nav>
+			<!--All pages share the same main navigation, and games sub-navigation. Common CSS rules are placed in css/main.css file. Use font awesome icons.-->
+			<!-- TO DO: Next semester, manipulate the navigation so that certain menu items are visible to the user only after they log in, ... for the time being, we are assuming the member has already logged in. Therefore, on all pages, when the user clicks on the Home item the index.html page opens. Leave the Games and Logout items set to href="#". -->
+			<ul>
+				<li>
+					<a href="../index.html">
+						<i class="fa fa-home">
+						</i>
+						Home
+					</a>
+				</li>
+				<li class="drop-down">
+					<a href="#">
+						<i class="fa fa-gamepad">
+						</i>
+						Games
+					</a>
+					<div class="drop-content">
+						<!-- [Resource: www.codepen.io; Note: This navigation is vertical.] -->
+						<a href="cryptogram.html">
+							<i class="fa fa-gamepad"></i>
+							Cryptograms
+						</a>
+						<a href="hangman.html">
+							<i class="fa fa-gamepad"></i>
+							Hangman
+						</a>
+						<a href="memory.html">
+							<i class="fa fa-gamepad"></i>
+							Memory
+						</a>
+						<a href="tictactoe.html">
+							<i class="fa fa-gamepad"></i>
+							Tic-Tac-Toe
+						</a>
+						<a href="bingo.html">
+							<i class="fa fa-check-square-o"></i>
+							Bingo
+						</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-sign-out">
+						</i>
+						Logout
+					</a>
+				</li>
+			</ul>	
+		</nav>
+
+
+		<main>
+			<!--Each page contains specified main content. Page-specific CSS rules are placed as internal styles. -->
+			<h3>Cryptograms</h3><!-- Each page has an h3 heading, white, centered, right below the navigation bar. -->
+			
+			<div class="game">
+				<!-- This is a white rectangular area-->
+				<ul class="board">
+					<!-- The phrase "HELLO WORLD" is an unordered list. Each list item consists of an input element and a label. On hover, for the input list item the background color changes to orange. The label's text is centered and has the size of 2em.-->
+					<li><input maxlength="1">
+						<label>H</label>
+					</li>
+					<li><input maxlength="1">
+						<label>E</label>
+					</li>
+					<li><input maxlength="1">
+						<label>L</label>
+					</li>
+					<li><input maxlength="1">
+						<label>L</label>
+					</li>
+					<li><input maxlength="1">
+						<label>O</label>
+					</li>
+					<li></li>
+					<li><input maxlength="1">
+						<label>W</label>
+					</li>
+					<li><input maxlength="1">
+						<label>O</label>
+					</li>
+					<li><input maxlength="1">
+						<label>R</label>
+					</li>
+					<li><input maxlength="1">
+						<label>L</label>
+					</li>
+					<li><input maxlength="1">
+						<label>D</label>
+					</li>
+				</ul>
+				
+				<ul class="alpha">
+					<!-- This is single line for the alphabet. On hover, for the alpha list item the background color changes to orange:  input on hover and alphabet on hover The label's text is centered and has the size of 2em.-->
+					<li>a</li>
+					<li>b</li>
+					<li>c</li>
+					<li>d</li>
+					<li>e</li>
+					<li>f</li>
+					<li>g</li>
+					<li>h</li>
+					<li>i</li>
+					<li>j</li>
+					<li>k</li>
+					<li>l</li>
+					<li>m</li>
+					<li>n</li>
+					<li>o</li>
+					<li>p</li>
+					<li>q</li>
+					<li>r</li>
+					<li>s</li>
+					<li>t</li>
+					<li>u</li>
+					<li>v</li>
+					<li>w</li>
+					<li>x</li>
+					<li>y</li>
+					<li>z</li>
+				</ul>
+			
+			</div>
+			
+			
+			<input type="button" value="Play Again">
+				<!-- All secondary pages share the same <button> elements formatting. When rendered they look like a button with: orange background, 1px WHITE solid border, round edges, WHITE text size 1.2em padding (18px 10px) with no decoration, fixed button width 180px and cursor pointer feature. -->
+		</main>
+		<footer>
+			<!--All pages share the same page footer. Common CSS rules are placed in css/main.css file. It contains social media icons links (use href="#" and font awesome for facebook, pinterest, linkedin, twitter, and flicker), centered on its own line. It spans the entire page and it is fixed to the bottom of the browser window. The background color is black with half-transparency but the image shows through and the text is easily readable. Adjust footer opacity for optimum text legibility.)-->
+			<div>
+				<a href="#">
+					<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-flickr" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</div>
+				
+			<address>
+				<p>Nikola Petrovski @  SYST10049 Web Development &copy; Sheridan College</p>
+			</address>
+		</footer>
+	</body>
+</html>

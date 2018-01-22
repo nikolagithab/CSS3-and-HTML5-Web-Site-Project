@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<!--
+		Name: Nikola Petrovski
+		Version: 2
+		Date created: 27 III 2017
+		Date updated: 9 IV 2017
+		Description: A website consisting of Home page, and 5 secondary web pages (Memory, Tic Tac Toe, Hangman, Cryptogram, and Bingo) appropriately organized using well-formed and valid HTML5  and aesthetically styled by using CSS3.
+	-->
+	<head>
+		<!-- This is the page title.-->
+		<title>Home Page</title>
+		<!-- This is the character set used in this page.-->
+		<meta charset="utf-8" />
+		<!-- This is  information that appears in web search results for this page.-->
+		<meta name="author" content="Nikola Petrovski" >
+		<meta name="description" content="The purpose of this page is to learn and apply the good CSS3 styling practices on appropriately organized,  well-formed and valid HTML5 Home page, and 5 secondary web pages (Memory, Tic Tac Toe, Hangman, Cryptogram, and Bingo).">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--This element gives the browser instructions how to control the page dimensions ans scaling.-->
+		<link rel="stylesheet" type="text/css"  href="css/main.css">
+		
+		<style>
+		main p {
+			text-align:left;
+		}
+		
+		.leftSide {
+			float: left;
+		}
+		
+		.leftSide::after {
+			clear: left;
+		}
+		
+		.rightSide {
+			overflow: auto;
+			font-size: 150%;
+		}
+		</style>
+		
+	</head> 
+	<body>
+		<!--Use font-family: Teko for the body of the document and default text color is white. Include @import url(https://fonts.googleapis.com/css?family=Teko:400,600); 
+		appropriately. The background color is black and it is covered by one of the background images, does not repeat.-->
+		<header>
+			<!-- All pages share the same page header. Common CSS rules are placed in css/main.css file.The header contains the largest and the second largest headings. It has an orange background color with no margin and stretches across the entire page; background is half-transparent (0.5); the height is determined automatically by the content; h1 has a font size of 3.9 em and h2 of 2.5 em; there is a 20 pixel padding on top and left.-->
+			<h1>Games and Other Web Apps</h1>
+			<h2>SYST10049 Web Development</h2>
+		</header>
+
+		<nav>
+			<!--All pages share the same main navigation, and games sub-navigation. Common CSS rules are placed in css/main.css file. Use font awesome icons.-->
+			<!-- TO DO: Next semester, manipulate the navigation so that certain menu items are visible to the user only after they log in, ... for the time being, we are assuming the member has already logged in. Therefore, on all pages, when the user clicks on the Home item the index.html page opens. Leave the Games and Logout items set to href="#". -->
+			<ul>
+				<li>
+					<a href="index.html">
+						<i class="fa fa-home">
+						</i>
+						Home
+					</a>
+				</li>
+				
+				<li class="drop-down">
+					<a href="#">
+						<i class="fa fa-gamepad">
+						</i>
+						Games
+					</a>
+					
+					
+					<div class="drop-content">
+						<!-- [Resource: www.codepen.io; Note: This navigation is vertical.] -->
+						<a href="content/cryptogram.html">
+							<i class="fa fa-gamepad"></i>
+							Cryptograms
+						</a>
+						
+						<a href="content/hangman.html">
+							<i class="fa fa-gamepad"></i>
+							Hangman
+						</a>
+						
+						<a href="content/memory.html">
+							<i class="fa fa-gamepad"></i>
+							Memory
+						</a>
+						
+						<a href="content/tictactoe.html">
+							<i class="fa fa-gamepad"></i>
+							Tic-Tac-Toe
+						</a>
+						
+						<a href="content/bingo.html">
+							<i class="fa fa-check-square-o"></i>
+							Bingo
+						</a>
+					</div>
+				</li>
+				
+				<li>
+					<a href="#">
+						<i class="fa fa-sign-out">
+						</i>
+						Logout
+					</a>
+				</li>
+			</ul>	
+		</nav>
+
+		<main>
+			<!--Each page contains specified main content. Page-specific CSS rules are placed as internal styles. The background is black with appropriate transparency to blend and still be easy to read. Include a paragraph of default size text; use lorem ipsum text. -->
+			<!-- article style="color: #000; text-align: center; This is article 1 of 1 contains two paragraphs in Latin.-->
+			<h3>
+				<!-- Each page has an h3 heading with font awesome icon, white, centered, right below the navigation bar. -->
+				<i class="fa fa-lightbulb-o">
+				</i>
+					News & Noteworthy
+			</h3>
+			<p class="rightSide">
+				<!-- Use the image with dice positioned on the left of the short message regarding the purpose of the site and benefits of becoming a member, using lorem ipsum. The font size is 1.5 of current default size. The length of the message fits the right side of the dice image. -->
+				<img class="leftSide" src="images/dice3.jpg" alt="dice">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo, magna at suscipit ultricies, nunc massa sagittis mauris, at gravida ipsum diam nec odio.</p>
+			<h3>
+				<i class="fa fa-leanpub">
+				</i>
+					Members' Corner
+			</h3>
+				<!-- Each page has an h3 heading with font awesome appropriate icon, white, centered, right below the navigation bar. -->
+			<p>
+				Praesent id dictum lacus. Quisque nec justo sed augue fermentum viverra sed sit amet enim. Curabitur hendrerit velit non mi auctor tempor at vitae diam. Donec in sapien efficitur, facilisis ex et, ultrices tortor. In lacinia sem non volutpat rhoncus. Mauris congue gravida dui, vel egestas mauris tempus ac. Suspendisse vel diam sed lacus ultricies condimentum.</p>
+		</main>
+		<footer>
+			<!--All pages share the same page footer. Common CSS rules are placed in css/main.css file. It contains social media icons links. Use href="#" and font awesome for facebook, pinterest, linkedin, twitter, and flicker), centered on its own line. It spans the entire page and it is fixed to the bottom of the browser window. The background color is black with half-transparency but the image shows through and the text is easily readable. Adjust footer opacity for optimum text legibility.-->
+			<div>
+				<a href="#">
+					<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-flickr" aria-hidden="true"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</div>
+				
+			<address>
+				<p>Nikola Petrovski @  SYST10049 Web Development &copy; Sheridan College</p>
+			</address>
+		</footer>
+	</body>
+</html>
